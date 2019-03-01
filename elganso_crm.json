@@ -1,0 +1,24 @@
+{
+    "name": "elganso_crm",
+    "modifications": {
+        "deleteFile": [],
+        "addFile": [],
+        "patchScript": [],
+        "patchJson": [
+            {
+                "name": "urls.json",
+                "path": "config/"
+            },
+            {
+                "name": "registros.json",
+                "path": "config/"
+            }
+        ],
+        "replaceFile": [
+            {
+                "name": "dependencias.json",
+                "path": "config/"
+            }
+        ]
+    }
+}
