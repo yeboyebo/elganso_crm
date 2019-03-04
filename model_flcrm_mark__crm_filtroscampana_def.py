@@ -87,7 +87,7 @@ class elganso_crm(interna):
 
         return True
 
-    def elganso_crm_queryGrid_filtroCiudades(self, model):
+    def elganso_crm_queryGrid_filtroCiudades(self, model, filters=None):
         query = {}
         query["tablesList"] = u""
         query["selectcount"] = u"COUNT(DISTINCT in_h_clientescrm.d_ciudad) as count"
@@ -114,8 +114,8 @@ class elganso_crm(interna):
     def insertaListas(self, model, oParam):
         return self.ctx.elganso_crm_insertaListas(model, oParam)
 
-    def queryGrid_filtroCiudades(self, model):
-        return self.ctx.elganso_crm_queryGrid_filtroCiudades(model)
+    def queryGrid_filtroCiudades(self, model, filters=None):
+        return self.ctx.elganso_crm_queryGrid_filtroCiudades(model, filters)
 
 
 # @class_declaration head #

@@ -4,7 +4,28 @@
             "type": "insertAfterNode",
             "path": "/flcrm_mark/crm_valoresalias",
             "value": {
+                "crm_filtroscampana": null
+            }
+        },
+        {
+            "type": "insertAfterNode",
+            "path": "/flcrm_mark/crm_filtroscampana",
+            "value": {
                 "eg_promospersonales": null
+            }
+        },
+        {
+            "type": "insertAfterNode",
+            "path": "/flcrm_mark/eg_promospersonales",
+            "value": {
+                "eg_tipospromocion": null
+            }
+        },
+        {
+            "type": "insertAfterNode",
+            "path": "/flcrm_mark/eg_tipospromocion",
+            "value": {
+                "eg_tiendaspromo": null
             }
         },
         {
@@ -51,6 +72,27 @@
                     "formRecord": "tpv_recepcionestx",
                     "form": "tpv_masterrecepcionestx"
                 }
+            }
+        },
+        {
+            "type": "insertAfterNode",
+            "path": "/flfact_tpv/tpv_recepcionestx",
+            "value": {
+                "tpv_eg_promopuntoscomanda": null
+            }
+        },
+        {
+            "type": "insertAfterNode",
+            "path": "/flfact_tpv/tpv_eg_promopuntoscomanda",
+            "value": {
+                "tpv_lineasgruposmultitransstock": null
+            }
+        },
+        {
+            "type": "insertAfterNode",
+            "path": "/flfact_tpv/tpv_lineasgruposmultitransstock",
+            "value": {
+                "tpv_lineasmultitransstock": null
             }
         }
     ]

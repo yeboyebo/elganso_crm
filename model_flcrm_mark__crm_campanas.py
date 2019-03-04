@@ -23,3 +23,6 @@ class elganso_crm_crm_campanas(flcrm_mark_crm_campanas, helpers.MixinConAcciones
     def insertarPromoPuntosComanda(self, cursor, curPromocion):
         return form.iface.insertarPromoPuntosComanda(self, cursor, curPromocion)
 
+    def iniciaValoresCursor(cursor=None):
+        return form.iface.iniciaValoresCursor(cursor)
+

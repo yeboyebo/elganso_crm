@@ -28,8 +28,8 @@ class elganso_crm_crm_filtroscampana(interna_crm_filtroscampana, helpers.MixinCo
     def insertaListas(self, oParam):
         return form.iface.insertaListas(self, oParam)
 
-    def queryGrid_filtroCiudades(self):
-        return form.iface.queryGrid_filtroCiudades(self)
+    def queryGrid_filtroCiudades(self, filters=None):
+        return form.iface.queryGrid_filtroCiudades(self, filters)
 
 
 # @class_declaration crm_filtroscampana #

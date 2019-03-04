@@ -2,7 +2,7 @@
 # @class_declaration elganso_crm #
 class elganso_crm(flcrm_mark):
 
-    def elganso_crm_iniciaValoresLabel(self, model, template=None):
+    def elganso_crm_iniciaValoresLabel(self, model, template=None, cursor=None, data=None):
         labels = {}
         labels[u"recuentoDestinatarios"] = "Destinatarios: No hay destinatarios, pulse botón de recontar"
         return labels
@@ -158,8 +158,8 @@ class elganso_crm(flcrm_mark):
     def __init__(self, context=None):
         super().__init__(context)
 
-    def iniciaValoresLabel(self, model=None, template=None, cursor=None):
-        return self.ctx.elganso_crm_iniciaValoresLabel(model, template)
+    def iniciaValoresLabel(self, model=None, template=None, cursor=None, data=None):
+        return self.ctx.elganso_crm_iniciaValoresLabel(model, template, cursor, data)
 
     def publicarPromocionCampana(self, model, oParam):
         return self.ctx.elganso_crm_publicarPromocionCampana(model, oParam)
