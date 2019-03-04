@@ -1,3 +1,57 @@
 {
-    "modifications": []
+    "modifications": [
+        {
+            "type": "insertAfterNode",
+            "path": "/flcrm_mark/crm_valoresalias",
+            "value": {
+                "eg_promospersonales": null
+            }
+        },
+        {
+            "type": "insertAfterNode",
+            "path": "/flfact_tpv/tpv_vales",
+            "value": {
+                "tpv_gruposmultitransstock": {
+                    "form": "tpv_mastergruposmultitransstock"
+                }
+            }
+        },
+        {
+            "type": "insertAfterNode",
+            "path": "/flfact_tpv/tpv_gruposmultitransstock",
+            "value": {
+                "tpv_multitransstock": {
+                    "formRecord": "tpv_multitransstock",
+                    "form": "tpv_mastermultitransstock"
+                }
+            }
+        },
+        {
+            "type": "insertAfterNode",
+            "path": "/flfact_tpv/tpv_multitransstock",
+            "value": {
+                "tpv_viajesmultitransstock": null
+            }
+        },
+        {
+            "type": "insertAfterNode",
+            "path": "/flfact_tpv/tpv_viajesmultitransstock",
+            "value": {
+                "tpv_enviostx": {
+                    "formRecord": "tpv_enviostx",
+                    "form": "tpv_masterenviostx"
+                }
+            }
+        },
+        {
+            "type": "insertAfterNode",
+            "path": "/flfact_tpv/tpv_enviostx",
+            "value": {
+                "tpv_recepcionestx": {
+                    "formRecord": "tpv_recepcionestx",
+                    "form": "tpv_masterrecepcionestx"
+                }
+            }
+        }
+    ]
 }

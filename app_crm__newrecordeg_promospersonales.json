@@ -1,0 +1,32 @@
+{
+    "querystring": {},
+    "schema": {},
+    "layout": {
+        "campanasForm": {
+            "prefix": "eg_promospersonales",
+            "componente": "YBForm",
+            "class": "claseGrid",
+            "submit": "create",
+            "success": [{"receiver": "tdb_eg_promospersonales", "slot": "return"}],
+            "fields": {
+                "gb__": {
+                    "fields": {
+                        "codpromocion": {"disabled": true},
+                        "fecha": {"disabled": true, "label": "Fecha de creación"},
+                        "descripcion": {},
+                        "codtipopromocion": {
+                            "rel": "eg_tipospromocion",
+                            "key": "codtipopromocion",
+                            "desc": "descripcion",
+                            "desc_name": "Descripción"
+                        },
+                        "fechainicio": {},
+                        "fechafin": {},
+                        "tipocliente": {}
+                    }
+                }
+            },
+            "exclude": {}
+        }
+    }
+}

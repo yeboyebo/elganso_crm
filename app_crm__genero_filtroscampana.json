@@ -1,0 +1,49 @@
+{
+    "querystring": {},
+    "schema": {},
+    "layout": {
+        "optsRadioGenero": {
+            "componente": "YBFieldDB",
+            "prefix": "crm_filtroscampana",
+            "style": {
+                "width": "100%"
+            },
+            "tipo": 90,
+            "verbose_name": "Género",
+            "label": "Género",
+            "key": "genero",
+            "validaciones": null,
+            "opts": [
+                {"key": "Masculino", "alias": "Masculino"},
+                {"key": "Femenino", "alias": "Femenino"},
+                {"key": "Ambos", "alias": "Ambos"}
+            ]
+        },
+        "botonAccion": {
+            "componente": "YBButton",
+            "prefix": "crm_filtroscampana",
+            "className": "submitButton",
+            "label": "GUARDAR",
+            "buttonType": "raised",
+            "action": {
+                "key": "insertarGenero",
+                "success": [{"slot": "return"}]
+            }
+        }
+    },
+    "acciones": {
+        "insertarGenero": {
+            "action": "legacy",
+            "serverAction": "insertaListas",
+            "params": [
+                {
+                    "tipo": 3,
+                    "required": false,
+                    "verbose_name": "genero",
+                    "key": "genero",
+                    "validaciones": null
+                }
+            ]
+        }
+    }
+}

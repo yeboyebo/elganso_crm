@@ -1,0 +1,41 @@
+{
+    "querystring": {},
+    "schema": {
+        "gruposmoda": {
+            "querystring": {
+                "p_l": 50,
+                "p_c": 1
+            }
+        }
+    },
+    "layout": {
+        "filtroscampanaGrid": {
+            "label": "Grupo Moda",
+            "componente": "YBGrid",
+            "prefix": "gruposmoda",
+            "multiselectable": true,
+            "doubleGridActions": true,
+            "loadSelecteds": {"tipo": "field", "key": "listaselect"},
+            "filter": "buscador",
+            "class": "claseGrid",
+            "columns": [
+                {"tipo": "field", "listpos": "title", "key": "descripcion", "flex": 2},
+                {"tipo": "field", "listpos": "body", "key": "codgrupomoda"}
+            ],
+            "rowclick": false,
+            "accionesGrid": [{
+                "key": "guardaGruposModa",
+                "label": "Guardar",
+                "success": [{"receiver": "tdb_crm_campanas", "slot": "return"}]
+            }]
+        }
+    },
+    "acciones": {
+        "guardaGruposModa": {
+            "label" : "",
+            "action": "gridAction",
+            "serverAction": "insertaListas",
+            "icon": "playlist_add_check"
+        }
+    }
+}

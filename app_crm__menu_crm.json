@@ -1,0 +1,19 @@
+{
+    "items": [
+        {
+            "NAME": "Campañas",
+            "TEXT": "CAMPAÑAS",
+            "URL": "crm/crm_campanas/master",
+            "ICON": "cloud_queue",
+            "COLOR": "rgb(00, 180, 255)"
+        },
+        {
+            "NAME": "Promociones",
+            "VISIBLE": false,
+            "TEXT": "PROMOCIONES",
+            "URL": "crm/eg_promospersonales/master",
+            "ICON": "shopping_cart",
+            "COLOR": "rgb(240, 120, 20)"
+        }
+    ]
+}

@@ -1,0 +1,49 @@
+{
+    "initValidation": {
+        "error": {
+            "aplic": "almacen",
+            "prefix": "tpv_gruposmultitransstock",
+            "template": "grupousu",
+            "msg": "Debes seleccionar una grupo activo"
+        }
+    },
+    "querystring": {
+        "p_l": 50,
+        "p_c": true
+    },
+    "schema": {
+        "filtroCiudades": {
+            "query": {"p_l": 10}
+        }
+    },
+    "layout": {
+        "queryGrid_filtroCiudades": {
+            "componente": "YBGrid",
+            "label": "Ciudades",
+            "prefix": "filtroCiudades",
+            "filter": "buscador",
+            "multiselectable": true,
+            "doubleGridActions": true,
+            "type": "query",
+            "paginacion": true,
+            "loadSelecteds": {"tipo": "field", "key": "listaselect"},
+            "columns": [
+                {"tipo": "field", "key": "in_h_clientescrm.d_ciudad", "label": "Ciudad"}
+            ],
+            "rowclick": "",
+            "accionesGrid": [{
+                "key": "guardaPaises",
+                "label": "Guardar",
+                "success": [{"receiver": "tdb_crm_campanas", "slot": "return"}]
+            }]
+        }
+    },
+    "acciones": {
+    	"guardaPaises": {
+            "label" : "",
+            "action": "gridAction",
+            "serverAction": "insertaListas",
+            "icon": "playlist_add_check"
+        }
+    }
+}

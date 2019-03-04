@@ -1,0 +1,53 @@
+{
+    "querystring": {
+        "p_l": 50,
+        "p_c": true
+    },
+    "schema": {},
+    "layout": {
+        "masterGrid": {
+            "componente": "YBGrid",
+            "class": "claseGrid",
+            "label": "Campañas",
+            "prefix": "master",
+            "filter": "buscador",
+            "columns": [
+                {
+                    "tipo": "field",
+                    "key": "codcampana",
+                    "width": 100
+                },
+                {
+                    "tipo": "field",
+                    "key": "descripcion",
+                    "flex": 3,
+                    "width": 400
+                },
+                {
+                    "tipo": "field",
+                    "key": "codestado",
+                    "width": 90
+                },
+                {
+                    "tipo": "act",
+                    "key": "delete",
+                    "label": "Delete",
+                    "success": [{"receiver": "tdb_crmcampanas", "slot": "refrescar"}]
+                }
+            ],
+            "rowclick": "link"
+        },
+        "newRecordFacturascli": {
+            "componente": "YBNewRecord",
+            "class": "info",
+            "icon": "add"
+        }
+    },
+    "acciones": {
+        "delete": {
+            "label": "Prueba",
+            "action": "deleteRow",
+            "icon": "delete"
+        }
+    }
+}

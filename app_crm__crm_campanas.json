@@ -1,0 +1,202 @@
+{
+    "querystring": {},
+    "schema": {
+        "crm_filtroscampana": {
+            "rel": "codcampana",
+            "querystring": {}
+        }
+    },
+    "layout": {
+        "groupBoxAcciones": {
+            "componente": "YBGroupBox",
+            "className": "actionGB",
+            "style": {"zIndex": 3, "position": "relative"},
+            "layout": {
+                "generaCSVButton": {
+                    "componente": "YBButton",
+                    "prefix": "crm_campanas",
+                    "label": "Generar CSV",
+                    "disabled": true,
+                    "className": "floatRight",
+                    "buttonType": "raised",
+                    "action": {
+                        "key": "generaCSV",
+                        "success": [{"slot": "refrescar"}]
+                    }
+                },
+                "publicaPromoButton": {
+                    "componente": "YBButton",
+                    "visible": false,
+                    "prefix": "crm_campanas",
+                    "label": "Publicar Promoción",
+                    "className": "floatRight",
+                    "buttonType": "raised",
+                    "action": {
+                        "key": "publicarPromo",
+                        "success": [{"slot": "refrescar"}]
+                    }
+                },
+                "recontarButton": {
+                    "componente": "YBButton",
+                    "prefix": "crm_campanas",
+                    "label": "Recontar Destinatarios",
+                    "className": "floatRight",
+                    "buttonType": "raised",
+                    "action": {
+                        "key": "recontarDes",
+                        "success": [{"slot": "refrescar"}]
+                    }
+                },
+                "salesButton": {
+                    "componente": "YBButton",
+                    "prefix": "crm_campanas",
+                    "label": "Enviar Destinatarios",
+                    "className": "floatRight",
+                    "disabled": true,
+                    "buttonType": "raised",
+                    "action": {
+                        "key": "sendSales",
+                        "success": [{"slot": "refrescar"}]
+                    }
+                }
+            }
+        },
+        "fdb_soloSuscritos": {
+            "componente": "YBFieldDB",
+            "prefix": "otros",
+            "key": "solosuscritos",
+            "label": "Incluir solo usuarios suscritos",
+            "className": "floatRight",
+            "style": {"marginTop": "10px"},
+            "defaultvalue": true,
+            "tipo": 18
+        },
+        "campanasForm": {
+            "componente": "YBForm",
+            "prefix": "crm_campanas",
+            "class": "claseGrid",
+            "submit": "update",
+            "success": [{"receiver": "tdb_crm_campanas", "slot": "redirect"}],
+            "fields": {
+                "gb__": {
+                    "fields": {
+                        "codcampana": {"disabled": true},
+                        "fechainicio": {},
+                        "canal": {},
+                        "descripcion": {},
+                        "codestado": {"disabled": true},
+                        "codpromocion": {
+                            "visible": false,
+                            "desc": "descripcion",
+                            "desc_name": "Descripción"
+                        },
+                        "labelPrueba": {
+                            "componente": "YBLabel",
+                            "text": "%yb1",
+                            "params": [{"type": "calc", "key": "recuentoDestinatarios"}]
+                        }
+                    }
+                }
+            },
+            "exclude": {}
+        },
+        "layoutRecuento": {
+            "componente": "YBGroupBox",
+            "className": "class",
+            "layout": {}
+        },
+        "filtroscampanaGrid": {
+            "componente": "YBGrid",
+            "label": "Filtros Campaña",
+            "prefix": "crm_filtroscampana",
+            "multiselectable": false,
+            "doubleGridActions": false,
+            "class": "claseGrid",
+            "columns": [
+                {
+                    "tipo": "field",
+                    "key": "tipofiltro"
+                },
+                {
+                    "tipo": "field",
+                    "key": "descripcion",
+                    "flex": 4
+                },
+                {
+                    "tipo": "act",
+                    "key": "delete",
+                    "label": "Delete",
+                    "success": [{"receiver": "tdb_crmcampanas", "slot": "refrescar"}]
+                }
+            ],
+            "rowclick": "dameTemplateFiltro",
+            "accionesGrid": [{
+                "key": "nuevaLinea",
+                "label": "Nuevo",
+                "success": [{ "slot": "refrescar"}]
+            }]
+        }
+    },
+    "acciones": {
+        "dameTemplateFiltro": {
+            "action": "goto",
+            "serverAction": "dameTemplateFiltro"
+        },
+        "nuevaLinea": {
+            "label": "Nuevo",
+            "action": "newRow",
+            "icon": "add_circle"
+        },
+        "delete": {
+            "label": "Prueba",
+            "action": "deleteRow",
+            "icon": "delete"
+        },
+        "recontarDes": {
+            "action": "clientBufferChanged",
+            "name": "recuentoDestinatarios"
+        },
+        "generaCSV": {
+            "action": "csvFile",
+            "serverAction": "generaCSVDestinatarios",
+            "icon": "icon",
+            "params": [
+                {
+                    "tipo": 18,
+                    "required": true,
+                    "verbose_name": "Incluir solo usuarios suscritos",
+                    "key": "solosuscritos",
+                    "null": true
+                }
+            ]
+        },
+        "publicarPromo": {
+            "action": "legacy",
+            "serverAction": "publicarPromocionCampana",
+            "icon": "icon",
+            "params": [
+                {
+                    "tipo": 18,
+                    "required": true,
+                    "verbose_name": "Incluir solo usuarios suscritos",
+                    "key": "solosuscritos",
+                    "null": true
+                }
+            ]
+        },
+        "sendSales": {
+            "action": "legacy",
+            "serverAction": "sendSalesApi",
+            "icon": "icon",
+            "params": [
+                {
+                    "tipo": 18,
+                    "required": true,
+                    "verbose_name": "Incluir solo usuarios suscritos",
+                    "key": "solosuscritos",
+                    "null": true
+                }
+            ]
+        }
+    }
+}

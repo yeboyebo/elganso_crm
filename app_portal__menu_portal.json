@@ -1,0 +1,26 @@
+{
+    "modifications": [
+        {
+            "type": "insertAfterItem",
+            "path": "/items[root]",
+            "value": {
+                "NAME": "crm",
+                "TEXT": "CRM",
+                "ICON": "pie_chart",
+                "COLOR": "rgb(200, 30, 30)"
+            }
+        },
+        {
+            "type": "insertAfterItem",
+            "path": "/items[crm]",
+            "value": {
+                "NAME": "saiku",
+                "TEXT": "SAIKU",
+                "TYPE": "absolute",
+                "URL": "http://crm.elganso.com:9000/",
+                "ICON": "insert_chart",
+                "COLOR": "rgb(30, 30, 150)"
+            }
+        }
+    ]
+}

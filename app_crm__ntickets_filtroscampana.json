@@ -1,0 +1,23 @@
+{
+    "querystring": {},
+    "schema": {},
+    "layout": {
+        "filtrocampanaForm": {
+            "prefix": "crm_filtroscampana",
+            "componente": "YBForm",
+            "class": "claseGrid",
+            "submit": "update",
+            "success": [{"receiver": "tdb_crm_campanas", "slot": "return"}],
+            "fields": {
+                "gb__": {
+                    "fields": {
+                        "tipofiltro": {"disabled": true},
+                        "numericodesde": {},
+                        "numericohasta": {}
+                    }
+                }
+            },
+            "exclude": {}
+        }
+    }
+}

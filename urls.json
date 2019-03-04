@@ -1,3 +1,67 @@
 {
-    "modifications": []
+    "modifications": [
+        {
+            "type": "insertAfterNode",
+            "path": "/marketing",
+            "value": {
+                "crm": {}
+            }
+        },
+        {
+            "type": "insertAfterNode",
+            "path": "/models/flcrm_mark/crm_valoresalias",
+            "value": {
+                "crm_filtroscampana": null
+            }
+        },
+        {
+            "type": "insertAfterNode",
+            "path": "/models/flcrm_mark/crm_filtroscampana",
+            "value": {
+                "eg_promospersonales": null
+            }
+        },
+        {
+            "type": "insertAfterNode",
+            "path": "/models/flcrm_mark/eg_promospersonales",
+            "value": {
+                "eg_tipospromocion": null
+            }
+        },
+        {
+            "type": "insertAfterNode",
+            "path": "/models/flcrm_mark/eg_tipospromocion",
+            "value": {
+                "eg_tiendaspromo": null
+            }
+        },
+        {
+            "type": "insertAfterNode",
+            "path": "/models/flfactalma/lineasregstocks",
+            "value": {
+                "gruposmoda": null
+            }
+        },
+        {
+            "type": "insertAfterNode",
+            "path": "/models/flfactalma/gruposmoda",
+            "value": {
+                "annostc": null
+            }
+        },
+        {
+            "type": "insertAfterNode",
+            "path": "/models/flfactalma/annostc",
+            "value": {
+                "temporadas": null
+            }
+        },
+        {
+            "type": "insertAfterNode",
+            "path": "/models/flfactalma/temporadas",
+            "value": {
+                "tallas": null
+            }
+        }
+    ]
 }

@@ -3,8 +3,20 @@
     "dependencias": [
         {
             "version": "v1.0",
-            "key": "baseparche"
+            "key": "celery"
+        },
+        {
+            "version": "v1.0",
+            "key": "flfacturac"
+        },
+        {
+            "version": "v1.0",
+            "key": "flfact_tpv"
+        },
+        {
+            "version": "v1.0",
+            "key": "flcrm_mark"
         }
     ],
-    "fun_aq": null
+    "fun_aq": "fun_elganso_ctr"
 }

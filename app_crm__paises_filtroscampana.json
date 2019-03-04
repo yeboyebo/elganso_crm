@@ -1,0 +1,41 @@
+{
+    "querystring": {},
+    "schema": {
+        "paises": {
+            "querystring": {
+                "p_l": 50,
+                "p_c": 1
+            }
+        }
+    },
+    "layout": {
+        "filtroscampanaGrid": {
+            "componente": "YBGrid",
+            "label": "Paí­s",
+            "prefix": "paises",
+            "multiselectable": true,
+            "doubleGridActions": true,
+            "loadSelecteds": {"tipo": "field", "key": "listaselect"},
+            "filter": "buscador",
+            "class": "claseGrid",
+            "columns": [
+                {"tipo": "field", "key": "codpais"},
+                {"tipo": "field", "key": "nombre", "flex": 10}
+            ],
+            "rowclick": false,
+            "accionesGrid": [{
+                "key": "guardaPaises",
+                "label": "Guardar",
+                "success": [{"receiver": "tdb_crm_campanas", "slot": "return"}]
+            }]
+        }
+    },
+    "acciones": {
+        "guardaPaises": {
+            "label" : "",
+            "action": "gridAction",
+            "serverAction": "insertaListas",
+            "icon": "playlist_add_check"
+        }
+    }
+}

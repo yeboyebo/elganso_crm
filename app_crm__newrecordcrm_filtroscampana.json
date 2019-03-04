@@ -1,0 +1,22 @@
+{
+    "querystring": {},
+    "schema": {},
+    "layout": {
+        "filtrocampanaForm": {
+            "prefix": "crm_filtroscampana",
+            "componente": "YBForm",
+            "class": "claseGrid",
+            "submit": "create",
+            "error": "Ya existe el filtro",
+            "success": [{"receiver": "dameTemplateFiltro", "slot": "goto"}],
+            "fields": {
+                "gb__": {
+                    "fields": {
+                        "tipofiltro": {}
+                    }
+                }
+            },
+            "exclude": {}
+        }
+    }
+}

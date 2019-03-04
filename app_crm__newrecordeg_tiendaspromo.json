@@ -1,0 +1,27 @@
+{
+    "querystring": {},
+    "schema": {},
+    "layout": {
+        "tiendaspromoForm": {
+            "prefix": "eg_tiendaspromo",
+            "componente": "YBForm",
+            "class": "claseGrid",
+            "submit": "create",
+            "success": [{"receiver": "tdb_eg_promospersonales", "slot": "return"}],
+            "fields": {
+                "gb__": {
+                    "fields": {
+                        "codpromocion": {"disabled": true},
+                        "codtienda": {
+                            "rel": "in_dimtienda",
+                            "key": "codtienda",
+                            "desc": "descripcion",
+                            "desc_name": "Descripción"
+                        }
+                    }
+                }
+            },
+            "exclude": {}
+        }
+    }
+}

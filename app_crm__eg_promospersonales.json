@@ -1,0 +1,81 @@
+{
+    "querystring": {},
+    "schema": {
+        "eg_tiendaspromo": {
+            "rel": "codpromocion",
+            "querystring": {}
+        }
+    },
+    "layout": {
+        "campanasForm": {
+            "componente": "YBForm",
+            "prefix": "eg_promospersonales",
+            "class": "claseGrid",
+            "submit": "update",
+            "success": [{"receiver": "tdb_eg_promospersonales", "slot": "return"}],
+            "fields": {
+                "gb__": {
+                    "fields": {
+                        "codpromocion": {"disabled": true},
+                        "fecha": {"disabled": true, "label": "Fecha de creación"},
+                        "descripcion": {},
+                        "codtipopromocion": {
+                            "rel": "eg_tipospromocion",
+                            "key": "codtipopromocion",
+                            "desc": "descripcion",
+                            "desc_name": "Descripción"
+                        },
+                        "fechainicio": {},
+                        "fechafin": {},
+                        "tipocliente": {},
+                        "activa": {"disabled": true}
+                    }
+                }
+            },
+            "exclude": {}
+         },
+         "egtiendaspromo": {
+            "componente": "YBGrid",
+            "label": "Tiendas Promoción",
+            "prefix": "eg_tiendaspromo",
+            "multiselectable": false,
+            "doubleGridActions": false,
+            "class": "claseGrid",
+            "columns": [
+                {
+                	"tipo": "field",
+                	"key": "codtienda"
+                },
+                {
+                	"tipo": "field",
+                	"key": "nombretienda",
+                	"flex": 4
+                },
+                {
+                    "tipo": "act",
+                    "key": "delete",
+                    "label": "Delete",
+                    "success": [{"slot": "refrescar"}]
+                }
+            ],
+            "rowclick": "goto",
+            "accionesGrid": [{
+                "key": "nuevaLinea",
+                "label": "Nuevo",
+                "success": [{ "slot": "refrescar"}]
+            }]
+        }
+    },
+    "acciones": {
+        "nuevaLinea": {
+            "label": "Nuevo",
+            "action": "newRow",
+            "icon": "add"
+        },
+        "delete": {
+            "label": "Prueba",
+            "action": "deleteRow",
+            "icon": "delete"
+        }
+    }
+}

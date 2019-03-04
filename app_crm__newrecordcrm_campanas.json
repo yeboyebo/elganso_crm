@@ -1,0 +1,25 @@
+{
+    "querystring": {},
+    "schema": {},
+    "layout": {
+        "campanasForm": {
+            "prefix": "crm_campanas",
+            "componente": "YBForm",
+            "class": "claseGrid",
+            "submit": "create",
+            "success": [{"slot": "redirect"}],
+            "fields": {
+                "gb__": {
+                    "fields": {
+                        "codcampana": {"disabled": true},
+                        "fechainicio": {},
+                        "canal": {},
+                        "descripcion": {},
+                        "codestado": {"disabled": true}
+                    }
+                }
+            },
+            "exclude": {}
+        }
+    }
+}

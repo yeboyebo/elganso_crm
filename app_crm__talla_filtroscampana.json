@@ -1,0 +1,41 @@
+{
+    "querystring": {},
+    "schema": {
+        "tallas": {
+            "querystring": {
+                "p_l": 50,
+                "p_c": 1
+            }
+        }
+    },
+    "layout": {
+        "filtroscampanaGrid": {
+            "label": "Tallas",
+            "componente": "YBGrid",
+            "prefix": "tallas",
+            "multiselectable": true,
+            "doubleGridActions": true,
+            "loadSelecteds": {"tipo": "field", "key": "listaselect"},
+            "filter": "buscador",
+            "class": "claseGrid",
+            "columns": [
+                {"tipo": "field", "key": "codtalla"},
+                {"tipo": "field", "key": "descripcion", "flex": 10}
+            ],
+            "rowclick": false,
+            "accionesGrid": [{
+                "key": "guardaTallas",
+                "label": "Guardar",
+                "success": [{"receiver": "tdb_crm_campanas", "slot": "return"}]
+            }]
+        }
+    },
+    "acciones": {
+        "guardaTallas": {
+            "label" : "",
+            "action": "gridAction",
+            "serverAction": "insertaListas",
+            "icon": "playlist_add_check"
+        }
+    }
+}

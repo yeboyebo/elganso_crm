@@ -2,8 +2,186 @@
     "name": "elganso_crm",
     "modifications": {
         "deleteFile": [],
-        "addFile": [],
-        "patchScript": [],
+        "addFile": [
+            {
+                "name": "model_flcrm_mark__crm_filtroscampana.py",
+                "path": "models/flcrm_mark/"
+            },
+            {
+                "name": "model_flcrm_mark__crm_filtroscampana_def.py",
+                "path": "models/flcrm_mark/"
+            },
+            {
+                "name": "model_flcrm_mark__eg_promospersonales.py",
+                "path": "models/flcrm_mark/"
+            },
+            {
+                "name": "model_flcrm_mark__eg_promospersonales_def.py",
+                "path": "models/flcrm_mark/"
+            },
+            {
+                "name": "model_flcrm_mark__eg_tipospromocion.py",
+                "path": "models/flcrm_mark/"
+            },
+            {
+                "name": "model_flcrm_mark__eg_tipospromocion_def.py",
+                "path": "models/flcrm_mark/"
+            },
+            {
+                "name": "model_flcrm_mark__eg_tiendaspromo.py",
+                "path": "models/flcrm_mark/"
+            },
+            {
+                "name": "model_flcrm_mark__eg_tiendaspromo_def.py",
+                "path": "models/flcrm_mark/"
+            },
+            {
+                "name": "model_flfactalma__gruposmoda.py",
+                "path": "models/flfactalma/"
+            },
+            {
+                "name": "model_flfactalma__gruposmoda_def.py",
+                "path": "models/flfactalma/"
+            },
+            {
+                "name": "model_flfactalma__annostc.py",
+                "path": "models/flfactalma/"
+            },
+            {
+                "name": "model_flfactalma__annostc_def.py",
+                "path": "models/flfactalma/"
+            },
+            {
+                "name": "model_flfactalma__temporadas.py",
+                "path": "models/flfactalma/"
+            },
+            {
+                "name": "model_flfactalma__temporadas_def.py",
+                "path": "models/flfactalma/"
+            },
+            {
+                "name": "model_flfactalma__tallas.py",
+                "path": "models/flfactalma/"
+            },
+            {
+                "name": "model_flfactalma__tallas_def.py",
+                "path": "models/flfactalma/"
+            },
+            {
+                "name": "app_crm____init__.py",
+                "path": "apps/crm/"
+            },
+            {
+                "name": "app_crm__tasks.py",
+                "path": "apps/crm/"
+            },
+            {
+                "name": "app_crm__menu_crm.json",
+                "path": "apps/crm/templates/crm/"
+            },
+            {
+                "name": "app_crm__gruposmoda_filtroscampana.json",
+                "path": "apps/crm/templates/crm/plantillas/"
+            },
+            {
+                "name": "app_crm__fechaalta_filtroscampana.json",
+                "path": "apps/crm/templates/crm/plantillas/"
+            },
+            {
+                "name": "app_crm__newrecordcrm_campanas.json",
+                "path": "apps/crm/templates/crm/plantillas/"
+            },
+            {
+                "name": "app_crm__articulo_filtroscampana.json",
+                "path": "apps/crm/templates/crm/plantillas/"
+            },
+            {
+                "name": "app_crm__familias_filtroscampana.json",
+                "path": "apps/crm/templates/crm/plantillas/"
+            },
+            {
+                "name": "app_crm__newrecordeg_tiendaspromo.json",
+                "path": "apps/crm/templates/crm/plantillas/"
+            },
+            {
+                "name": "app_crm__cantidad_filtroscampana.json",
+                "path": "apps/crm/templates/crm/plantillas/"
+            },
+            {
+                "name": "app_crm__eg_promospersonales.json",
+                "path": "apps/crm/templates/crm/plantillas/"
+            },
+            {
+                "name": "app_crm__mastercrm_campanas.json",
+                "path": "apps/crm/templates/crm/plantillas/"
+            },
+            {
+                "name": "app_crm__paises_filtroscampana.json",
+                "path": "apps/crm/templates/crm/plantillas/"
+            },
+            {
+                "name": "app_crm__newrecordcrm_filtroscampana.json",
+                "path": "apps/crm/templates/crm/plantillas/"
+            },
+            {
+                "name": "app_crm__talla_filtroscampana.json",
+                "path": "apps/crm/templates/crm/plantillas/"
+            },
+            {
+                "name": "app_crm__fecha_filtroscampana.json",
+                "path": "apps/crm/templates/crm/plantillas/"
+            },
+            {
+                "name": "app_crm__ntickets_filtroscampana.json",
+                "path": "apps/crm/templates/crm/plantillas/"
+            },
+            {
+                "name": "app_crm__annoarticulo_filtroscampana.json",
+                "path": "apps/crm/templates/crm/plantillas/"
+            },
+            {
+                "name": "app_crm__ciudades_filtroscampana.json",
+                "path": "apps/crm/templates/crm/plantillas/"
+            },
+            {
+                "name": "app_crm__mastereg_promospersonales.json",
+                "path": "apps/crm/templates/crm/plantillas/"
+            },
+            {
+                "name": "app_crm__newrecordeg_promospersonales.json",
+                "path": "apps/crm/templates/crm/plantillas/"
+            },
+            {
+                "name": "app_crm__genero_filtroscampana.json",
+                "path": "apps/crm/templates/crm/plantillas/"
+            },
+            {
+                "name": "app_crm__crm_campanas.json",
+                "path": "apps/crm/templates/crm/plantillas/"
+            },
+            {
+                "name": "app_crm__tiendas_filtroscampana.json",
+                "path": "apps/crm/templates/crm/plantillas/"
+            },
+            {
+                "name": "app_crm__views_crm.py",
+                "path": "apps/crm/viewset/"
+            },
+            {
+                "path": "models/models/",
+                "name": "model_models__clientBch.py"
+            }
+        ],
+        "patchScript": [
+            {
+                "path": "models/flcrm_mark/",
+                "name": "model_flcrm_mark__crm_campanas_def.py"
+            },
+            {
+                "path": "models/flcrm_mark/",
+                "name": "model_flcrm_mark__crm_campanas.py"
+            }
+        ],
         "patchJson": [
             {
                 "name": "urls.json",
@@ -12,6 +190,10 @@
             {
                 "name": "registros.json",
                 "path": "config/"
+            },
+            {
+                "name": "app_portal__menu_portal.json",
+                "path": "apps/portal/templates/portal/"
             }
         ],
         "replaceFile": [

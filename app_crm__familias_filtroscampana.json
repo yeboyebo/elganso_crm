@@ -1,0 +1,41 @@
+{
+    "querystring": {},
+    "schema": {
+        "familias": {
+            "querystring": {
+                "p_l": 50,
+                "p_c": 1
+            }
+        }
+    },
+    "layout": {
+        "filtroscampanaGrid": {
+            "label": "Familias",
+            "componente": "YBGrid",
+            "prefix": "familias",
+            "multiselectable": true,
+            "doubleGridActions": true,
+            "loadSelecteds": {"tipo": "field", "key": "listaselect"},
+            "filter": "buscador",
+            "class": "claseGrid",
+            "columns": [
+                {"tipo": "field", "key": "codfamilia"},
+                {"tipo": "field", "key": "descripcion", "flex": 10}
+            ],
+            "rowclick": false,
+            "accionesGrid": [{
+                "key": "guardaPaises",
+                "label": "Guardar",
+                "success": [{"receiver": "tdb_crm_campanas", "slot": "return"}]
+            }]
+        }
+    },
+    "acciones": {
+        "guardaPaises": {
+            "label" : "",
+            "action": "gridAction",
+            "serverAction": "insertaListas",
+            "icon": "playlist_add_check"
+        }
+    }
+}

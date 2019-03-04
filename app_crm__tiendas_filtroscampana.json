@@ -1,0 +1,44 @@
+{
+    "querystring": {},
+    "schema": {
+        "tpv_tiendas": {
+            "querystring": {
+                "p_l": 50,
+                "p_c": 1
+            }
+        }
+    },
+    "layout": {
+        "filtroscampanaGrid": {
+            "componente": "YBGrid",
+            "label": "Tiendas",
+            "prefix": "tpv_tiendas",
+            "multiselectable": true,
+            "doubleGridActions": true,
+            "loadSelecteds": {
+                "tipo": "field",
+                "key": "listaselect"
+            },
+            "filter": "buscador",
+            "class": "claseGrid",
+            "columns": [
+                {"tipo": "field", "key": "codtienda"},
+                {"tipo": "field", "key": "descripcion", "flex": 10}
+            ],
+            "rowclick": false,
+            "accionesGrid": [{
+                "key": "guardaTiendas",
+                "label": "Guardar",
+                "success": [{"receiver": "tdb_crm_campanas", "slot": "return"}]
+            }]
+        }
+    },
+    "acciones": {
+        "guardaTiendas": {
+            "label": "",
+            "action": "gridAction",
+            "serverAction": "insertaListas",
+            "icon": "playlist_add_check"
+        }
+    }
+}
