@@ -6,6 +6,7 @@
             "value": {
                 "NAME": "crm",
                 "TEXT": "CRM",
+                "URL": "crm",
                 "ICON": "pie_chart",
                 "COLOR": "rgb(200, 30, 30)"
             }
