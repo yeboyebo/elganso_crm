@@ -25,8 +25,13 @@ class elganso_crm(interna):
             suscritos = False
             if "solosuscritos" in dict["otros"]:
                 suscritos = dict["otros"]["solosuscritos"]
-            dest = crm_campanas.recontarDestinatarios(curCampana, suscritos)
+            fidelizados = False
+            if "solofidelizados" in dict["otros"]:
+                fidelizados = dict["otros"]["solofidelizados"]
+
+            dest = crm_campanas.recontarDestinatarios(curCampana, suscritos, fidelizados)
             dict["labels"]["recuentoDestinatarios"] = "Destinatarios: " + str(dest)
+
 
             if dest > 0:
                 if "groupBoxAcciones" not in dict["drawIf"]:
