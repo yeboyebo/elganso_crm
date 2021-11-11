@@ -61,7 +61,7 @@
                 }
             }
         },
-        "fdb_soloSuscritos": {
+        "solosuscritos": {
             "componente": "YBFieldDB",
             "prefix": "otros",
             "key": "solosuscritos",
@@ -71,7 +71,7 @@
             "defaultvalue": true,
             "tipo": 18
         },
-        "fdb_soloFidelizados": {
+        "solofidelizados": {
             "componente": "YBFieldDB",
             "prefix": "otros",
             "key": "solofidelizados",
@@ -177,7 +177,15 @@
                     "verbose_name": "Incluir solo usuarios suscritos",
                     "key": "solosuscritos",
                     "null": true
-                }
+                },
+                {
+                   "tipo": 18,
+                   "required": true,
+                   "verbose_name": "Incluir solo usuarios fidelizados",
+                   "key": "solofidelizados",
+                   "null": true
+               }
+
             ]
         },
         "publicarPromo": {
@@ -191,7 +199,15 @@
                     "verbose_name": "Incluir solo usuarios suscritos",
                     "key": "solosuscritos",
                     "null": true
-                }
+                },
+                {
+                   "tipo": 18,
+                   "required": true,
+                   "verbose_name": "Incluir solo usuarios fidelizados",
+                   "key": "solofidelizados",
+                   "null": true
+               }
+
             ]
         },
         "sendSales": {
@@ -205,7 +221,15 @@
                     "verbose_name": "Incluir solo usuarios suscritos",
                     "key": "solosuscritos",
                     "null": true
-                }
+                },
+                {
+                   "tipo": 18,
+                   "required": true,
+                   "verbose_name": "Incluir solo usuarios fidelizados",
+                   "key": "solofidelizados",
+                   "null": true
+               }
+
             ]
         }
     }
