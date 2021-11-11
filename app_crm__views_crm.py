@@ -20,7 +20,7 @@ class elganso_crm(interna):
 
     def elganso_crm_getCSV(self, request):
         response = HttpResponse(content_type='text/csv')
-        response['Content-Disposition'] = 'attachment; filename="algo.csv"'
+        response['Content-Disposition'] = 'attachment; filename="file.csv"'
         query = paises.objects.all()
         writer = csv.writer(response)
 

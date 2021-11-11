@@ -71,6 +71,16 @@
             "defaultvalue": true,
             "tipo": 18
         },
+        "fdb_soloFidelizados": {
+            "componente": "YBFieldDB",
+            "prefix": "otros",
+            "key": "solofidelizados",
+            "label": "Clientes fidelizados",
+            "className": "floatRight",
+            "style": {"marginTop": "10px"},
+            "defaultvalue": true,
+            "tipo": 18
+        },
         "campanasForm": {
             "componente": "YBForm",
             "prefix": "crm_campanas",
